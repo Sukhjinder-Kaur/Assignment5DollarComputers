@@ -101,6 +101,7 @@
       this.OrderFinishButton.TabIndex = 8;
       this.OrderFinishButton.Text = "Finish";
       this.OrderFinishButton.UseVisualStyleBackColor = true;
+      this.OrderFinishButton.Click += new System.EventHandler(this.OrderFinishButton_Click);
       // 
       // OrderCancelButton
       // 
@@ -112,6 +113,7 @@
       this.OrderCancelButton.TabIndex = 7;
       this.OrderCancelButton.Text = "Cancel";
       this.OrderCancelButton.UseVisualStyleBackColor = true;
+      this.OrderCancelButton.Click += new System.EventHandler(this.OrderCancelButton_Click);
       // 
       // OrderBackButton
       // 
@@ -123,9 +125,11 @@
       this.OrderBackButton.TabIndex = 9;
       this.OrderBackButton.Text = "Back";
       this.OrderBackButton.UseVisualStyleBackColor = true;
+      this.OrderBackButton.Click += new System.EventHandler(this.OrderBackButton_Click);
       // 
       // OrderMenuStrip
       // 
+      this.OrderMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
       this.OrderMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.OrderMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OrderFileMenuItem,
@@ -135,7 +139,7 @@
       this.OrderMenuStrip.Name = "OrderMenuStrip";
       this.OrderMenuStrip.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
       this.OrderMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-      this.OrderMenuStrip.Size = new System.Drawing.Size(1031, 36);
+      this.OrderMenuStrip.Size = new System.Drawing.Size(1031, 35);
       this.OrderMenuStrip.TabIndex = 10;
       // 
       // OrderFileMenuItem
@@ -146,27 +150,27 @@
             this.OrderExitMenuItem});
       this.OrderFileMenuItem.Name = "OrderFileMenuItem";
       this.OrderFileMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
-      this.OrderFileMenuItem.Size = new System.Drawing.Size(54, 30);
+      this.OrderFileMenuItem.Size = new System.Drawing.Size(54, 29);
       this.OrderFileMenuItem.Text = "&File";
       // 
       // OrderPrintMenuItem
       // 
       this.OrderPrintMenuItem.Name = "OrderPrintMenuItem";
       this.OrderPrintMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-      this.OrderPrintMenuItem.Size = new System.Drawing.Size(211, 34);
+      this.OrderPrintMenuItem.Size = new System.Drawing.Size(270, 34);
       this.OrderPrintMenuItem.Text = "&Print";
       // 
       // ToolStripSeparator
       // 
       this.ToolStripSeparator.Name = "ToolStripSeparator";
-      this.ToolStripSeparator.Size = new System.Drawing.Size(208, 6);
+      this.ToolStripSeparator.Size = new System.Drawing.Size(267, 6);
       // 
       // OrderExitMenuItem
       // 
       this.OrderExitMenuItem.Name = "OrderExitMenuItem";
       this.OrderExitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.OrderExitMenuItem.Size = new System.Drawing.Size(211, 34);
-      this.OrderExitMenuItem.Text = "&Exit";
+      this.OrderExitMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.OrderExitMenuItem.Text = "E&xit";
       // 
       // OrderEditMenuItem
       // 
@@ -174,7 +178,7 @@
             this.OrderBackMenuItem});
       this.OrderEditMenuItem.Name = "OrderEditMenuItem";
       this.OrderEditMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-      this.OrderEditMenuItem.Size = new System.Drawing.Size(58, 30);
+      this.OrderEditMenuItem.Size = new System.Drawing.Size(58, 29);
       this.OrderEditMenuItem.Text = "&Edit";
       // 
       // OrderBackMenuItem
@@ -190,7 +194,7 @@
             this.OrderAboutMenuItem});
       this.OrderHelpMenuItem.Name = "OrderHelpMenuItem";
       this.OrderHelpMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
-      this.OrderHelpMenuItem.Size = new System.Drawing.Size(65, 30);
+      this.OrderHelpMenuItem.Size = new System.Drawing.Size(65, 29);
       this.OrderHelpMenuItem.Text = "&Help";
       // 
       // OrderAboutMenuItem
@@ -778,6 +782,7 @@
       this.Name = "OrderForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Complete Your Order";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OrderForm_FormClosing);
       this.OrderMenuStrip.ResumeLayout(false);
       this.OrderMenuStrip.PerformLayout();
       this.OrderGroupBox.ResumeLayout(false);

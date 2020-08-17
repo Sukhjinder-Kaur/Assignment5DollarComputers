@@ -41,7 +41,7 @@
       this.SplashFormLabel.AutoSize = true;
       this.SplashFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.SplashFormLabel.ForeColor = System.Drawing.Color.LightCoral;
-      this.SplashFormLabel.Location = new System.Drawing.Point(296, 31);
+      this.SplashFormLabel.Location = new System.Drawing.Point(323, 31);
       this.SplashFormLabel.Name = "SplashFormLabel";
       this.SplashFormLabel.Size = new System.Drawing.Size(405, 58);
       this.SplashFormLabel.TabIndex = 0;
@@ -56,9 +56,9 @@
       // PictureBox
       // 
       this.PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox.Image")));
-      this.PictureBox.Location = new System.Drawing.Point(247, 106);
+      this.PictureBox.Location = new System.Drawing.Point(339, 132);
       this.PictureBox.Name = "PictureBox";
-      this.PictureBox.Size = new System.Drawing.Size(512, 512);
+      this.PictureBox.Size = new System.Drawing.Size(300, 300);
       this.PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
       this.PictureBox.TabIndex = 1;
       this.PictureBox.TabStop = false;
@@ -73,7 +73,7 @@
       this.Controls.Add(this.SplashFormLabel);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
       this.Name = "SplashForm";
-      this.Opacity = 0.8D;
+      this.Opacity = 0.9D;
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
       this.ResumeLayout(false);

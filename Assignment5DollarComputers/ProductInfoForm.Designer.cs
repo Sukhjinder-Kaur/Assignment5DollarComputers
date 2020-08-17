@@ -87,6 +87,7 @@
       // 
       // PInformationMenuStrip
       // 
+      this.PInformationMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
       this.PInformationMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.PInformationMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProductFileMenuItem,
@@ -112,27 +113,27 @@
       // 
       this.ProductOpenMenuItem.Name = "ProductOpenMenuItem";
       this.ProductOpenMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-      this.ProductOpenMenuItem.Size = new System.Drawing.Size(223, 34);
+      this.ProductOpenMenuItem.Size = new System.Drawing.Size(270, 34);
       this.ProductOpenMenuItem.Text = "&Open";
       // 
       // ProductSaveMenuItem
       // 
       this.ProductSaveMenuItem.Name = "ProductSaveMenuItem";
       this.ProductSaveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-      this.ProductSaveMenuItem.Size = new System.Drawing.Size(223, 34);
+      this.ProductSaveMenuItem.Size = new System.Drawing.Size(270, 34);
       this.ProductSaveMenuItem.Text = "&Save";
       // 
       // ToolStripSeparator
       // 
       this.ToolStripSeparator.Name = "ToolStripSeparator";
-      this.ToolStripSeparator.Size = new System.Drawing.Size(220, 6);
+      this.ToolStripSeparator.Size = new System.Drawing.Size(267, 6);
       // 
       // ProductExitMenuItem
       // 
       this.ProductExitMenuItem.Name = "ProductExitMenuItem";
       this.ProductExitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.ProductExitMenuItem.Size = new System.Drawing.Size(223, 34);
-      this.ProductExitMenuItem.Text = "&Exit";
+      this.ProductExitMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.ProductExitMenuItem.Text = "E&xit";
       // 
       // ProductEditMenuItem
       // 
@@ -147,7 +148,7 @@
       this.ProductSelectAnotherProductMenuItem.Name = "ProductSelectAnotherProductMenuItem";
       this.ProductSelectAnotherProductMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
       this.ProductSelectAnotherProductMenuItem.Size = new System.Drawing.Size(355, 34);
-      this.ProductSelectAnotherProductMenuItem.Text = "&Select Another Product";
+      this.ProductSelectAnotherProductMenuItem.Text = "Se&lect Another Product";
       // 
       // ProductIDTableLayoutPanel
       // 
@@ -655,6 +656,7 @@
       this.ProductAnotherProductSelectionButton.TabIndex = 19;
       this.ProductAnotherProductSelectionButton.Text = "Select Another Product";
       this.ProductAnotherProductSelectionButton.UseVisualStyleBackColor = true;
+      this.ProductAnotherProductSelectionButton.Click += new System.EventHandler(this.ProductAnotherProductSelectionButton_Click);
       // 
       // ProductCancelButton
       // 
@@ -666,6 +668,7 @@
       this.ProductCancelButton.TabIndex = 20;
       this.ProductCancelButton.Text = "Cancel";
       this.ProductCancelButton.UseVisualStyleBackColor = true;
+      this.ProductCancelButton.Click += new System.EventHandler(this.ProductCancelButton_Click);
       // 
       // ProductNextButton
       // 
@@ -677,6 +680,7 @@
       this.ProductNextButton.TabIndex = 21;
       this.ProductNextButton.Text = "Next";
       this.ProductNextButton.UseVisualStyleBackColor = true;
+      this.ProductNextButton.Click += new System.EventHandler(this.ProductNextButton_Click);
       // 
       // ProductInfoForm
       // 
@@ -695,6 +699,7 @@
       this.Name = "ProductInfoForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "ProductInfoForm";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductInfoForm_FormClosing);
       this.PInformationMenuStrip.ResumeLayout(false);
       this.PInformationMenuStrip.PerformLayout();
       this.ProductIDTableLayoutPanel.ResumeLayout(false);

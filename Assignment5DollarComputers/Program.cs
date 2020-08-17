@@ -13,6 +13,7 @@ namespace Assignment5DollarComputers
     public static SelectForm selectForm;
     public static ProductInfoForm productInfoForm;
     public static OrderForm orderForm;
+    public static AboutBoxForm aboutBoxForm;
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
@@ -27,6 +28,7 @@ namespace Assignment5DollarComputers
       selectForm = new SelectForm();
       productInfoForm = new ProductInfoForm();
       orderForm = new OrderForm();
+      aboutBoxForm = new AboutBoxForm();
       Application.Run(splashForm);
     }
   }

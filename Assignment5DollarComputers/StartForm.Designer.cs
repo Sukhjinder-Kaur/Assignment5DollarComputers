@@ -41,7 +41,7 @@
       // 
       this.StartLabel.AutoSize = true;
       this.StartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.StartLabel.Location = new System.Drawing.Point(276, 37);
+      this.StartLabel.Location = new System.Drawing.Point(267, 37);
       this.StartLabel.Name = "StartLabel";
       this.StartLabel.Size = new System.Drawing.Size(428, 32);
       this.StartLabel.TabIndex = 0;
@@ -50,7 +50,7 @@
       // StartButton
       // 
       this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.StartButton.Location = new System.Drawing.Point(376, 408);
+      this.StartButton.Location = new System.Drawing.Point(387, 356);
       this.StartButton.Name = "StartButton";
       this.StartButton.Size = new System.Drawing.Size(226, 38);
       this.StartButton.TabIndex = 1;
@@ -61,7 +61,7 @@
       // OpenButton
       // 
       this.OpenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.OpenButton.Location = new System.Drawing.Point(376, 470);
+      this.OpenButton.Location = new System.Drawing.Point(387, 421);
       this.OpenButton.Name = "OpenButton";
       this.OpenButton.Size = new System.Drawing.Size(226, 38);
       this.OpenButton.TabIndex = 2;
@@ -72,7 +72,7 @@
       // ExitButton
       // 
       this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.ExitButton.Location = new System.Drawing.Point(376, 529);
+      this.ExitButton.Location = new System.Drawing.Point(387, 479);
       this.ExitButton.Name = "ExitButton";
       this.ExitButton.Size = new System.Drawing.Size(226, 38);
       this.ExitButton.TabIndex = 3;
@@ -84,9 +84,9 @@
       // 
       this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-      this.pictureBox1.Location = new System.Drawing.Point(341, 87);
+      this.pictureBox1.Location = new System.Drawing.Point(387, 96);
       this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(302, 302);
+      this.pictureBox1.Size = new System.Drawing.Size(152, 152);
       this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
       this.pictureBox1.TabIndex = 4;
       this.pictureBox1.TabStop = false;
@@ -105,7 +105,7 @@
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
       this.Name = "StartForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Welcome to dollar computers";
+      this.Text = "Welcome To Dollar Computers";
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();

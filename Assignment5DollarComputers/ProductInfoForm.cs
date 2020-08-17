@@ -16,5 +16,25 @@ namespace Assignment5DollarComputers
     {
       InitializeComponent();
     }
+
+    private void ProductAnotherProductSelectionButton_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ProductCancelButton_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ProductNextButton_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      Application.Exit();
+    }
   }
 }
