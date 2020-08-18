@@ -132,7 +132,6 @@
       // 
       // OrderMenuStrip
       // 
-      this.OrderMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
       this.OrderMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.OrderMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OrderFileMenuItem,
@@ -217,9 +216,9 @@
       this.OrderGroupBox.Controls.Add(this.OrderTableLayoutPanel);
       this.OrderGroupBox.Controls.Add(this.ProductInfoTableLayoutPanel);
       this.OrderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.OrderGroupBox.Location = new System.Drawing.Point(12, 57);
+      this.OrderGroupBox.Location = new System.Drawing.Point(12, 77);
       this.OrderGroupBox.Name = "OrderGroupBox";
-      this.OrderGroupBox.Size = new System.Drawing.Size(658, 523);
+      this.OrderGroupBox.Size = new System.Drawing.Size(658, 486);
       this.OrderGroupBox.TabIndex = 11;
       this.OrderGroupBox.TabStop = false;
       this.OrderGroupBox.Text = "System Components";
@@ -648,6 +647,7 @@
       // 
       // OrderPicture
       // 
+      this.OrderPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
       this.OrderPicture.Location = new System.Drawing.Point(696, 67);
       this.OrderPicture.Name = "OrderPicture";
       this.OrderPicture.Size = new System.Drawing.Size(299, 159);

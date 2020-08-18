@@ -89,7 +89,6 @@
       // 
       // PInformationMenuStrip
       // 
-      this.PInformationMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
       this.PInformationMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.PInformationMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ProductFileMenuItem,
@@ -115,7 +114,7 @@
       // 
       this.ProductOpenMenuItem.Name = "ProductOpenMenuItem";
       this.ProductOpenMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-      this.ProductOpenMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.ProductOpenMenuItem.Size = new System.Drawing.Size(223, 34);
       this.ProductOpenMenuItem.Text = "&Open";
       this.ProductOpenMenuItem.Click += new System.EventHandler(this.ProductOpenMenuItem_Click);
       // 
@@ -123,20 +122,20 @@
       // 
       this.ProductSaveMenuItem.Name = "ProductSaveMenuItem";
       this.ProductSaveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-      this.ProductSaveMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.ProductSaveMenuItem.Size = new System.Drawing.Size(223, 34);
       this.ProductSaveMenuItem.Text = "&Save";
       this.ProductSaveMenuItem.Click += new System.EventHandler(this.ProductSaveMenuItem_Click);
       // 
       // ToolStripSeparator
       // 
       this.ToolStripSeparator.Name = "ToolStripSeparator";
-      this.ToolStripSeparator.Size = new System.Drawing.Size(267, 6);
+      this.ToolStripSeparator.Size = new System.Drawing.Size(220, 6);
       // 
       // ProductExitMenuItem
       // 
       this.ProductExitMenuItem.Name = "ProductExitMenuItem";
       this.ProductExitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.ProductExitMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.ProductExitMenuItem.Size = new System.Drawing.Size(223, 34);
       this.ProductExitMenuItem.Text = "E&xit";
       this.ProductExitMenuItem.Click += new System.EventHandler(this.ProductExitMenuItem_Click);
       // 
@@ -173,11 +172,11 @@
       this.ProductIDTableLayoutPanel.Controls.Add(this.ConditionResultTextBox, 3, 0);
       this.ProductIDTableLayoutPanel.Controls.Add(this.CostResultTextBox, 5, 0);
       this.ProductIDTableLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.ProductIDTableLayoutPanel.Location = new System.Drawing.Point(13, 72);
+      this.ProductIDTableLayoutPanel.Location = new System.Drawing.Point(14, 65);
       this.ProductIDTableLayoutPanel.Name = "ProductIDTableLayoutPanel";
       this.ProductIDTableLayoutPanel.RowCount = 1;
       this.ProductIDTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.ProductIDTableLayoutPanel.Size = new System.Drawing.Size(981, 32);
+      this.ProductIDTableLayoutPanel.Size = new System.Drawing.Size(1005, 47);
       this.ProductIDTableLayoutPanel.TabIndex = 15;
       // 
       // ProductIDLabel
@@ -185,9 +184,9 @@
       this.ProductIDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
       this.ProductIDLabel.AutoSize = true;
       this.ProductIDLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ProductIDLabel.Location = new System.Drawing.Point(3, 1);
+      this.ProductIDLabel.Location = new System.Drawing.Point(3, 9);
       this.ProductIDLabel.Name = "ProductIDLabel";
-      this.ProductIDLabel.Size = new System.Drawing.Size(157, 29);
+      this.ProductIDLabel.Size = new System.Drawing.Size(161, 29);
       this.ProductIDLabel.TabIndex = 0;
       this.ProductIDLabel.Text = "Product ID";
       this.ProductIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,9 +196,9 @@
       this.ProductCostLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
       this.ProductCostLabel.AutoSize = true;
       this.ProductCostLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ProductCostLabel.Location = new System.Drawing.Point(655, 1);
+      this.ProductCostLabel.Location = new System.Drawing.Point(671, 9);
       this.ProductCostLabel.Name = "ProductCostLabel";
-      this.ProductCostLabel.Size = new System.Drawing.Size(157, 29);
+      this.ProductCostLabel.Size = new System.Drawing.Size(161, 29);
       this.ProductCostLabel.TabIndex = 5;
       this.ProductCostLabel.Text = "Cost";
       this.ProductCostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,16 +208,16 @@
       this.ProductConditionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
       this.ProductConditionLabel.AutoSize = true;
       this.ProductConditionLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.ProductConditionLabel.Location = new System.Drawing.Point(329, 1);
+      this.ProductConditionLabel.Location = new System.Drawing.Point(337, 9);
       this.ProductConditionLabel.Name = "ProductConditionLabel";
-      this.ProductConditionLabel.Size = new System.Drawing.Size(157, 29);
+      this.ProductConditionLabel.Size = new System.Drawing.Size(161, 29);
       this.ProductConditionLabel.TabIndex = 3;
       this.ProductConditionLabel.Text = "Condition";
       this.ProductConditionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // ProductIDResultTextBox
       // 
-      this.ProductIDResultTextBox.Location = new System.Drawing.Point(167, 5);
+      this.ProductIDResultTextBox.Location = new System.Drawing.Point(171, 5);
       this.ProductIDResultTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.ProductIDResultTextBox.Name = "ProductIDResultTextBox";
       this.ProductIDResultTextBox.Size = new System.Drawing.Size(153, 35);
@@ -226,7 +225,7 @@
       // 
       // ConditionResultTextBox
       // 
-      this.ConditionResultTextBox.Location = new System.Drawing.Point(493, 5);
+      this.ConditionResultTextBox.Location = new System.Drawing.Point(505, 5);
       this.ConditionResultTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.ConditionResultTextBox.Name = "ConditionResultTextBox";
       this.ConditionResultTextBox.Size = new System.Drawing.Size(155, 35);
@@ -234,7 +233,7 @@
       // 
       // CostResultTextBox
       // 
-      this.CostResultTextBox.Location = new System.Drawing.Point(819, 5);
+      this.CostResultTextBox.Location = new System.Drawing.Point(839, 5);
       this.CostResultTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.CostResultTextBox.Name = "CostResultTextBox";
       this.CostResultTextBox.Size = new System.Drawing.Size(157, 35);
@@ -248,7 +247,7 @@
       this.ProductInfoGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.ProductInfoGroupBox.Location = new System.Drawing.Point(8, 131);
       this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
-      this.ProductInfoGroupBox.Size = new System.Drawing.Size(986, 155);
+      this.ProductInfoGroupBox.Size = new System.Drawing.Size(1011, 160);
       this.ProductInfoGroupBox.TabIndex = 16;
       this.ProductInfoGroupBox.TabStop = false;
       this.ProductInfoGroupBox.Text = "Product Info";
@@ -364,7 +363,7 @@
       this.ProductTechSpecsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.ProductTechSpecsGroupBox.Location = new System.Drawing.Point(0, 308);
       this.ProductTechSpecsGroupBox.Name = "ProductTechSpecsGroupBox";
-      this.ProductTechSpecsGroupBox.Size = new System.Drawing.Size(1060, 194);
+      this.ProductTechSpecsGroupBox.Size = new System.Drawing.Size(1019, 195);
       this.ProductTechSpecsGroupBox.TabIndex = 17;
       this.ProductTechSpecsGroupBox.TabStop = false;
       this.ProductTechSpecsGroupBox.Text = "Tech Specs";

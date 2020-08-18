@@ -9,7 +9,6 @@ namespace Assignment5DollarComputers
   class RowFields
   {
     public static List<string> dollarComputersRowFields;
-    //public static List<string> dollarComputersOrder;
 
     public static string ProductID { get; set; }
     public static string Condition { get; set; }

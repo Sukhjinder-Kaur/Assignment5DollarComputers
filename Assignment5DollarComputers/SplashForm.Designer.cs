@@ -41,7 +41,7 @@
       this.SplashFormLabel.AutoSize = true;
       this.SplashFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.SplashFormLabel.ForeColor = System.Drawing.Color.LightCoral;
-      this.SplashFormLabel.Location = new System.Drawing.Point(323, 31);
+      this.SplashFormLabel.Location = new System.Drawing.Point(334, 31);
       this.SplashFormLabel.Name = "SplashFormLabel";
       this.SplashFormLabel.Size = new System.Drawing.Size(405, 58);
       this.SplashFormLabel.TabIndex = 0;

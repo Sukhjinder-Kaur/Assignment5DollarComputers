@@ -47,7 +47,7 @@ namespace Assignment5DollarComputers
           _columnIndex += 1;
         }
         this.PopulateRowFields(RowFields.dollarComputersRowFields);
-        this.SelectedItemTextBox.Text = ($"{RowFields.Manufacturer} {RowFields.Model} Priced at:{Convert.ToDouble(RowFields.Cost).ToString("C2")}");
+        this.SelectedItemTextBox.Text = ($"{RowFields.Manufacturer} {RowFields.Model} Priced at: {Convert.ToDouble(RowFields.Cost).ToString("C2")}");
         this.NextButton.Enabled = true;
       }
       catch (Exception e)

@@ -52,6 +52,9 @@
     <Compile Include="AboutBoxForm.Designer.cs">
       <DependentUpon>AboutBoxForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="dollarComputersDataSet.cs">
+      <DependentUpon>dollarComputersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dollarComputersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
@@ -141,6 +145,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Acer.jpg" />
+    <Content Include="Images\Asus.jpg" />
+    <Content Include="Images\Cybertronpc.jpg" />
+    <Content Include="Images\default.jpg" />
+    <Content Include="Images\Gateway.jpg" />
+    <Content Include="Images\Hp.jpg" />
+    <Content Include="Images\Ibuypower.jpg" />
+    <Content Include="Images\Imac.jpg" />
+    <Content Include="Images\Lenovo.jpg" />
+    <Content Include="Images\Toshiba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

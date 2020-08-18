@@ -71,9 +71,53 @@ namespace Assignment5DollarComputers
 
       if (this.OrderPriceResultLabel.Text != string.Empty)
       {
-        OrderPriceResultLabel.Text = Convert.ToString($"${ RowFields.Cost}");
-        OrderSalesTaxResultLabel.Text ="$"+ Convert.ToString(Convert.ToDouble(RowFields.Cost) * 0.13);
-        OrderTotalResultLabel.Text = "$" + Convert.ToString(Convert.ToDouble(RowFields.Cost) * 1.13);
+        double cost= Convert.ToDouble( RowFields.Cost);
+        OrderPriceResultLabel.Text = $"{cost:C2}";
+        double tax = Convert.ToDouble(RowFields.Cost) * 0.13;
+        OrderSalesTaxResultLabel.Text = $"{tax:C2}";
+        double totalcost= Convert.ToDouble(Convert.ToDouble(RowFields.Cost) * 1.13);
+        OrderTotalResultLabel.Text = $"{totalcost:C2}";
+      }
+
+      if (this.OrderManufacturerResultLabel.Text != string.Empty)
+      {
+        string Manufacturer = this.OrderManufacturerResultLabel.Text;
+        Image imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\default.jpg"); ;
+        switch (Manufacturer.ToUpper())
+        {
+          case "ACER":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Acer.jpg");
+            break;
+          case "ASUS":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Asus.jpg");
+            break;
+          case "CYBERTRONPC":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Cybertronpc.jpg");
+            break;
+          case "GATEWAY":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Gateway.jpg");
+            break;
+          case "HP":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Hp.jpg");
+            break;
+          case "IBUYPOWER":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Ibuypower.jpg");
+            break;
+          case "IMAC":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Imac.jpg");
+            break;
+          case "MACPRO":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Imac.jpg");
+            break;
+          case "LENOVO":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Lenovo.jpg");
+            break;
+          case "TOSHIBA":
+            imageToShow = System.Drawing.Image.FromFile("..\\..\\Images\\Toshiba.jpg");
+            break;
+        }
+        this.OrderPicture.BackgroundImage = imageToShow;
+        this.OrderPicture.BackgroundImageLayout = ImageLayout.Zoom;
       }
     }
 
