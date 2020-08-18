@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
       this.OrderFinishButton = new System.Windows.Forms.Button();
       this.OrderCancelButton = new System.Windows.Forms.Button();
       this.OrderBackButton = new System.Windows.Forms.Button();
@@ -53,7 +54,7 @@
       this.OrderHDDLabel = new System.Windows.Forms.Label();
       this.OrderGPUTypeLabel = new System.Windows.Forms.Label();
       this.OrderWebCamLabel = new System.Windows.Forms.Label();
-      this.OrderLCDSizerResultLabel = new System.Windows.Forms.Label();
+      this.OrderLCDSizeResultLabel = new System.Windows.Forms.Label();
       this.OrderMemoryResultLabel = new System.Windows.Forms.Label();
       this.OrderCPUBrandResultLabel = new System.Windows.Forms.Label();
       this.OrderCPUTypeResultLabel = new System.Windows.Forms.Label();
@@ -77,10 +78,12 @@
       this.OrderTotalResultLabel = new System.Windows.Forms.Label();
       this.OrderTotalLabel = new System.Windows.Forms.Label();
       this.PriceTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-      this.OrderTaxResultLabel = new System.Windows.Forms.Label();
+      this.OrderSalesTaxResultLabel = new System.Windows.Forms.Label();
       this.OrderPriceResultLabel = new System.Windows.Forms.Label();
       this.OrderPriceLabel = new System.Windows.Forms.Label();
       this.OrderTaxLabel = new System.Windows.Forms.Label();
+      this.PrintOrderFormDocument = new System.Drawing.Printing.PrintDocument();
+      this.PrintPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
       this.OrderMenuStrip.SuspendLayout();
       this.OrderGroupBox.SuspendLayout();
       this.OrderTableLayoutPanel.SuspendLayout();
@@ -157,7 +160,7 @@
       // 
       this.OrderPrintMenuItem.Name = "OrderPrintMenuItem";
       this.OrderPrintMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-      this.OrderPrintMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.OrderPrintMenuItem.Size = new System.Drawing.Size(211, 34);
       this.OrderPrintMenuItem.Text = "&Print";
       this.OrderPrintMenuItem.Click += new System.EventHandler(this.OrderPrintMenuItem_Click);
       // 
@@ -170,7 +173,7 @@
       // 
       this.OrderExitMenuItem.Name = "OrderExitMenuItem";
       this.OrderExitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.OrderExitMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.OrderExitMenuItem.Size = new System.Drawing.Size(211, 34);
       this.OrderExitMenuItem.Text = "E&xit";
       this.OrderExitMenuItem.Click += new System.EventHandler(this.OrderExitMenuItem_Click);
       // 
@@ -187,7 +190,7 @@
       // 
       this.OrderBackMenuItem.Name = "OrderBackMenuItem";
       this.OrderBackMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-      this.OrderBackMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.OrderBackMenuItem.Size = new System.Drawing.Size(211, 34);
       this.OrderBackMenuItem.Text = "&Back";
       this.OrderBackMenuItem.Click += new System.EventHandler(this.OrderBackMenuItem_Click);
       // 
@@ -204,7 +207,7 @@
       // 
       this.OrderAboutMenuItem.Name = "OrderAboutMenuItem";
       this.OrderAboutMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-      this.OrderAboutMenuItem.Size = new System.Drawing.Size(270, 34);
+      this.OrderAboutMenuItem.Size = new System.Drawing.Size(227, 34);
       this.OrderAboutMenuItem.Text = "&About";
       this.OrderAboutMenuItem.Click += new System.EventHandler(this.OrderAboutMenuItem_Click);
       // 
@@ -237,7 +240,7 @@
       this.OrderTableLayoutPanel.Controls.Add(this.OrderHDDLabel, 0, 6);
       this.OrderTableLayoutPanel.Controls.Add(this.OrderGPUTypeLabel, 0, 7);
       this.OrderTableLayoutPanel.Controls.Add(this.OrderWebCamLabel, 0, 8);
-      this.OrderTableLayoutPanel.Controls.Add(this.OrderLCDSizerResultLabel, 1, 0);
+      this.OrderTableLayoutPanel.Controls.Add(this.OrderLCDSizeResultLabel, 1, 0);
       this.OrderTableLayoutPanel.Controls.Add(this.OrderMemoryResultLabel, 1, 1);
       this.OrderTableLayoutPanel.Controls.Add(this.OrderCPUBrandResultLabel, 1, 2);
       this.OrderTableLayoutPanel.Controls.Add(this.OrderCPUTypeResultLabel, 1, 3);
@@ -405,18 +408,18 @@
       this.OrderWebCamLabel.Text = "Web Cam";
       this.OrderWebCamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
-      // OrderLCDSizerResultLabel
+      // OrderLCDSizeResultLabel
       // 
-      this.OrderLCDSizerResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+      this.OrderLCDSizeResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.OrderLCDSizerResultLabel.BackColor = System.Drawing.Color.White;
-      this.OrderLCDSizerResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-      this.OrderLCDSizerResultLabel.Location = new System.Drawing.Point(165, 0);
-      this.OrderLCDSizerResultLabel.Name = "OrderLCDSizerResultLabel";
-      this.OrderLCDSizerResultLabel.Size = new System.Drawing.Size(473, 27);
-      this.OrderLCDSizerResultLabel.TabIndex = 17;
-      this.OrderLCDSizerResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.OrderLCDSizeResultLabel.BackColor = System.Drawing.Color.White;
+      this.OrderLCDSizeResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+      this.OrderLCDSizeResultLabel.Location = new System.Drawing.Point(165, 0);
+      this.OrderLCDSizeResultLabel.Name = "OrderLCDSizeResultLabel";
+      this.OrderLCDSizeResultLabel.Size = new System.Drawing.Size(473, 27);
+      this.OrderLCDSizeResultLabel.TabIndex = 17;
+      this.OrderLCDSizeResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // OrderMemoryResultLabel
       // 
@@ -708,7 +711,7 @@
       this.PriceTableLayoutPanel.ColumnCount = 2;
       this.PriceTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
       this.PriceTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-      this.PriceTableLayoutPanel.Controls.Add(this.OrderTaxResultLabel, 1, 1);
+      this.PriceTableLayoutPanel.Controls.Add(this.OrderSalesTaxResultLabel, 1, 1);
       this.PriceTableLayoutPanel.Controls.Add(this.OrderPriceResultLabel, 1, 0);
       this.PriceTableLayoutPanel.Controls.Add(this.OrderPriceLabel, 0, 0);
       this.PriceTableLayoutPanel.Controls.Add(this.OrderTaxLabel, 0, 1);
@@ -720,16 +723,16 @@
       this.PriceTableLayoutPanel.Size = new System.Drawing.Size(293, 100);
       this.PriceTableLayoutPanel.TabIndex = 11;
       // 
-      // OrderTaxResultLabel
+      // OrderSalesTaxResultLabel
       // 
-      this.OrderTaxResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-      this.OrderTaxResultLabel.BackColor = System.Drawing.Color.White;
-      this.OrderTaxResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-      this.OrderTaxResultLabel.Location = new System.Drawing.Point(149, 60);
-      this.OrderTaxResultLabel.Name = "OrderTaxResultLabel";
-      this.OrderTaxResultLabel.Size = new System.Drawing.Size(141, 29);
-      this.OrderTaxResultLabel.TabIndex = 13;
-      this.OrderTaxResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.OrderSalesTaxResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+      this.OrderSalesTaxResultLabel.BackColor = System.Drawing.Color.White;
+      this.OrderSalesTaxResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+      this.OrderSalesTaxResultLabel.Location = new System.Drawing.Point(149, 60);
+      this.OrderSalesTaxResultLabel.Name = "OrderSalesTaxResultLabel";
+      this.OrderSalesTaxResultLabel.Size = new System.Drawing.Size(141, 29);
+      this.OrderSalesTaxResultLabel.TabIndex = 13;
+      this.OrderSalesTaxResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // OrderPriceResultLabel
       // 
@@ -767,6 +770,20 @@
       this.OrderTaxLabel.TabIndex = 9;
       this.OrderTaxLabel.Text = "Sales Tax (13%)";
       this.OrderTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
+      // PrintOrderFormDocument
+      // 
+      this.PrintOrderFormDocument.DocumentName = "Order Form";
+      // 
+      // PrintPreviewDialog
+      // 
+      this.PrintPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+      this.PrintPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+      this.PrintPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+      this.PrintPreviewDialog.Enabled = true;
+      this.PrintPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("PrintPreviewDialog.Icon")));
+      this.PrintPreviewDialog.Name = "PrintPreviewDialog";
+      this.PrintPreviewDialog.Visible = false;
       // 
       // OrderForm
       // 
@@ -840,7 +857,7 @@
     private System.Windows.Forms.Label OrderHDDLabel;
     private System.Windows.Forms.Label OrderGPUTypeLabel;
     private System.Windows.Forms.Label OrderWebCamLabel;
-    private System.Windows.Forms.Label OrderLCDSizerResultLabel;
+    private System.Windows.Forms.Label OrderLCDSizeResultLabel;
     private System.Windows.Forms.Label OrderMemoryResultLabel;
     private System.Windows.Forms.Label OrderCPUBrandResultLabel;
     private System.Windows.Forms.Label OrderOSResultLabel;
@@ -856,10 +873,12 @@
     private System.Windows.Forms.Label OrderTotalResultLabel;
     private System.Windows.Forms.Label OrderTotalLabel;
     private System.Windows.Forms.TableLayoutPanel PriceTableLayoutPanel;
-    private System.Windows.Forms.Label OrderTaxResultLabel;
+    private System.Windows.Forms.Label OrderSalesTaxResultLabel;
     private System.Windows.Forms.Label OrderPriceResultLabel;
     private System.Windows.Forms.Label OrderPriceLabel;
     private System.Windows.Forms.Label OrderTaxLabel;
     private System.Windows.Forms.ToolStripSeparator ToolStripSeparator;
+    private System.Drawing.Printing.PrintDocument PrintOrderFormDocument;
+    private System.Windows.Forms.PrintPreviewDialog PrintPreviewDialog;
   }
 }

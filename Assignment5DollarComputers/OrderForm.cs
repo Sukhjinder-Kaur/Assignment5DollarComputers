@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Drawing.Printing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,12 +46,6 @@ namespace Assignment5DollarComputers
       }
 
     }
-    private void ApplicationMessage(string message, string title)
-    {
-      MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-    }
-
-
     private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
     {
       Application.Exit();
@@ -58,10 +53,31 @@ namespace Assignment5DollarComputers
 
     private void OrderForm_Load(object sender, EventArgs e)
     {
+      OrderConditionResultLabel.Text = RowFields.Condition;
+      OrderPriceResultLabel.Text = RowFields.Cost;
+      OrderPlatformResultLabel.Text = RowFields.Platform;
+      OrderManufacturerResultLabel.Text = RowFields.Manufacturer;
+      OrderOSResultLabel.Text = RowFields.OS;
+      OrderModelResultLabel.Text = RowFields.Model;
+      OrderMemoryResultLabel.Text = RowFields.Memory;
+      OrderLCDSizeResultLabel.Text = RowFields.LCDSize;
+      OrderHDDResultLabel.Text = RowFields.HDD;
+      OrderCPUBrandResultLabel.Text = RowFields.CPUBrand;
+      OrderCPUNumberResultLabel.Text = RowFields.CPUNumber;
+      OrderGPUTypeResultLabel.Text = RowFields.GPUType;
+      OrderCPUTypeResultLabel.Text = RowFields.CPUType;
+      OrderCPUSpeedResultLabel.Text = RowFields.CPUSpeed;
+      OrderWebCamResultLabel.Text = RowFields.WebCam;
 
+      if (this.OrderPriceResultLabel.Text != string.Empty)
+      {
+        OrderPriceResultLabel.Text = Convert.ToString($"${ RowFields.Cost}");
+        OrderSalesTaxResultLabel.Text ="$"+ Convert.ToString(Convert.ToDouble(RowFields.Cost) * 0.13);
+        OrderTotalResultLabel.Text = "$" + Convert.ToString(Convert.ToDouble(RowFields.Cost) * 1.13);
+      }
     }
 
-    private void OrderAboutMenuItem_Click(object sender, EventArgs e)
+      private void OrderAboutMenuItem_Click(object sender, EventArgs e)
     {
       Program.aboutBoxForm.Show();
       this.Hide();
@@ -69,9 +85,24 @@ namespace Assignment5DollarComputers
 
     private void OrderPrintMenuItem_Click(object sender, EventArgs e)
     {
-
+      DialogResult _dialogResult = MessageBox.Show("Do you want to print a receipt?", "Dollar Computers", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+      if (_dialogResult == DialogResult.Yes)
+      {
+        CaptureScreen();
+        PrintOrderFormDocument.Print();
+      }
     }
 
+    Bitmap memoryImage;
+
+    private void CaptureScreen()
+    {
+      Graphics myGraphics = this.CreateGraphics();
+      Size s = this.Size;
+      memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+      Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+      memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
+    }
     private void OrderExitMenuItem_Click(object sender, EventArgs e)
     {
       Program.orderForm.Show();

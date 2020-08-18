@@ -47,7 +47,7 @@ namespace Assignment5DollarComputers
           _columnIndex += 1;
         }
         this.PopulateRowFields(RowFields.dollarComputersRowFields);
-        this.SelectedItemTextBox.Text = ($"{RowFields.Manufacturer},{RowFields.Model},{RowFields.Cost}");
+        this.SelectedItemTextBox.Text = ($"{RowFields.Manufacturer} {RowFields.Model} Priced at:{Convert.ToDouble(RowFields.Cost).ToString("C2")}");
         this.NextButton.Enabled = true;
       }
       catch (Exception e)
@@ -86,7 +86,7 @@ namespace Assignment5DollarComputers
     {
       RowFields.ProductID = dollarComputersRowFields[0];
       RowFields.Condition = dollarComputersRowFields[14];
-      RowFields.Cost = Convert.ToDouble(dollarComputersRowFields[1]).ToString("C2").Trim();
+      RowFields.Cost = dollarComputersRowFields[1];
       RowFields.Platform = dollarComputersRowFields[16];
       RowFields.OS = dollarComputersRowFields[15];
       RowFields.Manufacturer = dollarComputersRowFields[2];
