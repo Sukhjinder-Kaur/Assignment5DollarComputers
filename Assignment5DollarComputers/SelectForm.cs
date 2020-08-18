@@ -95,10 +95,10 @@ namespace Assignment5DollarComputers
       RowFields.LCDSize = dollarComputersRowFields[7];
       RowFields.HDD = dollarComputersRowFields[17];
       RowFields.CPUBrand = dollarComputersRowFields[10];
-      RowFields.CPUNumber = dollarComputersRowFields[13];
+      RowFields.CPUNumber = dollarComputersRowFields[12];
       RowFields.GPUType = dollarComputersRowFields[19];
       RowFields.CPUType = dollarComputersRowFields[11];
-      RowFields.CPUSpeed = dollarComputersRowFields[12];
+      RowFields.CPUSpeed = dollarComputersRowFields[13];
       RowFields.WebCam = dollarComputersRowFields[30];
     }
 

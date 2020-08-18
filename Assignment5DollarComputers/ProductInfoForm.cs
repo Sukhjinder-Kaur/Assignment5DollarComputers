@@ -122,7 +122,7 @@ namespace Assignment5DollarComputers
 
             streamWriter.Close();
             streamWriter.Dispose();
-            this.ApplicationMessage("File Successfully Read", "Dollar Computers");
+            this.ApplicationMessage("File Saved Successfully", "Dollar Computers");
           }
         }
         else
