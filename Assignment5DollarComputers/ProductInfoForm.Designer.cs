@@ -115,7 +115,7 @@
       // 
       this.ProductOpenMenuItem.Name = "ProductOpenMenuItem";
       this.ProductOpenMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-      this.ProductOpenMenuItem.Size = new System.Drawing.Size(223, 34);
+      this.ProductOpenMenuItem.Size = new System.Drawing.Size(270, 34);
       this.ProductOpenMenuItem.Text = "&Open";
       this.ProductOpenMenuItem.Click += new System.EventHandler(this.ProductOpenMenuItem_Click);
       // 
@@ -123,20 +123,20 @@
       // 
       this.ProductSaveMenuItem.Name = "ProductSaveMenuItem";
       this.ProductSaveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-      this.ProductSaveMenuItem.Size = new System.Drawing.Size(223, 34);
+      this.ProductSaveMenuItem.Size = new System.Drawing.Size(270, 34);
       this.ProductSaveMenuItem.Text = "&Save";
       this.ProductSaveMenuItem.Click += new System.EventHandler(this.ProductSaveMenuItem_Click);
       // 
       // ToolStripSeparator
       // 
       this.ToolStripSeparator.Name = "ToolStripSeparator";
-      this.ToolStripSeparator.Size = new System.Drawing.Size(220, 6);
+      this.ToolStripSeparator.Size = new System.Drawing.Size(267, 6);
       // 
       // ProductExitMenuItem
       // 
       this.ProductExitMenuItem.Name = "ProductExitMenuItem";
       this.ProductExitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.ProductExitMenuItem.Size = new System.Drawing.Size(223, 34);
+      this.ProductExitMenuItem.Size = new System.Drawing.Size(270, 34);
       this.ProductExitMenuItem.Text = "E&xit";
       this.ProductExitMenuItem.Click += new System.EventHandler(this.ProductExitMenuItem_Click);
       // 
@@ -662,6 +662,7 @@
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "ProductInfoForm";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductInfoForm_FormClosing);
+      this.Load += new System.EventHandler(this.ProductInfoForm_Load);
       this.PInformationMenuStrip.ResumeLayout(false);
       this.PInformationMenuStrip.PerformLayout();
       this.ProductIDTableLayoutPanel.ResumeLayout(false);
