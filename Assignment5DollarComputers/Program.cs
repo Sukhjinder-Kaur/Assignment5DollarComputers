@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*Name=Sukhjinder Kaur 
+ *Student number= 301087895
+ *Date last Modified= 18/08/2020
+ *Section- 001
+*/
 
 namespace Assignment5DollarComputers
 {

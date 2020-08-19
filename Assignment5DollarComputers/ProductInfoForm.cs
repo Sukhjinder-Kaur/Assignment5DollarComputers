@@ -8,7 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*Name=Sukhjinder Kaur 
+ *Student number= 301087895
+ *Date last Modified= 18/08/2020
+ *Section- 001
+ *Program description= This subclass displays the product selected in the selectform*/
 namespace Assignment5DollarComputers
 {
   public partial class ProductInfoForm : Form
@@ -17,13 +21,23 @@ namespace Assignment5DollarComputers
     {
       InitializeComponent();
     }
-
+    /// <summary>
+    /// This method takes the user to the select form(previous form ) in
+    /// case he/she wish to change the product selection
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductAnotherProductSelectionButton_Click(object sender, EventArgs e)
     {
       Program.selectForm.Show();
       this.Hide();
     }
-
+    /// <summary>
+    /// this methods opens a dialog box that exits the user from the program and
+    /// also gives the otion to stay on the appp if the user press okay
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductCancelButton_Click(object sender, EventArgs e)
     {
       DialogResult _dialogResult = MessageBox.Show("Do you want to exit the program?", "Dollar Computers", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -33,19 +47,33 @@ namespace Assignment5DollarComputers
         this.Close();
       }
     }
-
+    /// <summary>
+    /// This method takes the use to the next form (orderForm)
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductNextButton_Click(object sender, EventArgs e)
     {
       OrderForm orderForm = new OrderForm();
       orderForm.Show();
       this.Hide();
     }
+    /// <summary>
+    /// This method closes the application completely
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
 
     private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
     {
       Application.Exit();
     }
-
+    /// <summary>
+    /// This method stores the data from the file to a List then passed to open the 
+    /// file saved already and load to the form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductOpenMenuItem_Click(object sender, EventArgs e)
     {
       try
@@ -90,7 +118,11 @@ namespace Assignment5DollarComputers
         return;
       }
     }
-
+    /// <summary>
+    /// This method saves the data to the text file
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductSaveMenuItem_Click(object sender, EventArgs e)
     {
       try
@@ -137,23 +169,41 @@ namespace Assignment5DollarComputers
 
       }
     }
+    /// <summary>
+    /// This method manages  error/information messageboxes to be used in the form
+    /// </summary>
+    /// <param name="message"></param>
+    /// <param name="title"></param>
     private void ApplicationMessage(string message, string title)
     {
       MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
     }
 
-
+    /// <summary>
+    /// This method exits the user from the the form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductExitMenuItem_Click(object sender, EventArgs e)
     {
       Program.productInfoForm.Show();
     }
-
+    /// <summary>
+    /// this methods takes the user to the select form to change product selection
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductSelectAnotherProductMenuItem_Click(object sender, EventArgs e)
     {
       Program.selectForm.Show();
       this.Hide();
     }
-
+    /// <summary>
+    /// This method manages the Product Info Form 
+    /// by loading the selection to the form selected in the previous form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void ProductInfoForm_Load(object sender, EventArgs e)
     {
       this.ProductIDResultTextBox.Text= RowFields.ProductID;

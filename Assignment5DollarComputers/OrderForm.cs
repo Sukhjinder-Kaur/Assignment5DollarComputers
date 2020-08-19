@@ -9,6 +9,12 @@ using System.Text;
 using System.Drawing.Printing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*Name=Sukhjinder Kaur 
+ *Student number= 301087895
+ *Date last Modified= 18/08/2020
+ *Section- 001
+ */
+
 
 namespace Assignment5DollarComputers
 {
@@ -18,14 +24,23 @@ namespace Assignment5DollarComputers
     {
       InitializeComponent();
     }
-
+    /// <summary>
+    /// this method takes the user to the previous form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderBackButton_Click(object sender, EventArgs e)
     {
       ProductInfoForm productInfoForm = new ProductInfoForm();
       productInfoForm.Show();
       this.Hide();
     }
-
+    /// <summary>
+    /// this methods opens a dialog box that exits the user from the program and
+    /// also gives the otion to stay on the appp if the user press okay
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderCancelButton_Click(object sender, EventArgs e)
     {
       DialogResult _dialogResult = MessageBox.Show("Do you want to exit the program?", "Dollar Computers", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -35,7 +50,15 @@ namespace Assignment5DollarComputers
         this.Close();
       }
     }
-
+    /// <summary>
+    ///   /// <summary>
+    /// this methods opens a dialog box that shows the user the order confirmation and finishes the process
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderFinishButton_Click(object sender, EventArgs e)
     {
       DialogResult _dialogResult = MessageBox.Show("Thank you for using Dollar Computers Application" + "\n" +
@@ -46,11 +69,21 @@ namespace Assignment5DollarComputers
       }
 
     }
+    /// <summary>
+    /// This method closes the application completely
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderForm_FormClosing(object sender, FormClosingEventArgs e)
     {
       Application.Exit();
     }
-
+    /// <summary>
+    /// This method loads the data from the Product Info Form calculates the tax and
+    /// changes the image of the product as per the manufacturer selection
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderForm_Load(object sender, EventArgs e)
     {
       OrderConditionResultLabel.Text = RowFields.Condition;
@@ -120,13 +153,21 @@ namespace Assignment5DollarComputers
         this.OrderPicture.BackgroundImageLayout = ImageLayout.Zoom;
       }
     }
-
-      private void OrderAboutMenuItem_Click(object sender, EventArgs e)
+    /// <summary>
+    /// This method opens the About Form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void OrderAboutMenuItem_Click(object sender, EventArgs e)
     {
       Program.aboutBoxForm.Show();
       this.Hide();
     }
-
+    /// <summary>
+    /// This method manages printing of receipts or orders
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderPrintMenuItem_Click(object sender, EventArgs e)
     {
       DialogResult _dialogResult = MessageBox.Show("Do you want to print a receipt?", "Dollar Computers", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -151,7 +192,11 @@ namespace Assignment5DollarComputers
     {
       Program.orderForm.Show();
     }
-
+    /// <summary>
+    /// this method takes the user to the previous form
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OrderBackMenuItem_Click(object sender, EventArgs e)
     {
       ProductInfoForm productInfoForm = new ProductInfoForm();
